@@ -1,0 +1,97 @@
+
+byte---->short---->int---->long---->float---->double
+		    ^
+		    |
+		   char
+
+
+
+boolean to other & other to boolean not possible.
+
+
+
+0   - 47   --> special symbols
+48  - 57   --> '0' to '9'(string representation of digits only not nums.)
+58  - 64   --> special symbols
+65  - 90   --> A to Z
+91  - 96   --> special symbols
+97  - 122  --> a to z
+123 - 255  --> special symbols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)
+byte a=5;
+int b=a;
+sysout(b);//5
+
+2)
+int a=5;
+byte b=a;
+sysout(b);//error
+
+3)
+int a=97;
+char b=a;
+sysout(b);//error
+
+4)
+int a=97;
+char b=(char)a;
+sysout(b);//a
+
+5)
+int a=130;
+byte b=(byte)a;	//As we r converting explicitly, sys thinks there is a chance of prgm execution & gives o/p. Even so the lit is out of byte range, it will produce o/p.  (-128 to 127)loop. 
+sysout(b);//-126
+
+6)
+boolean a=true;
+int b=(int)a;
+sysoout(b);//error
+
+7)
+char a='A';
+long b=[optional(long)]a;
+sysout(b);//65
+
+
+
+
+
+
+(b,s,i,c)+(b,s,i,c)=i
+(b,s,i,c,l)+l=l
+(b,s,i,c,l,f)+f=f
+(b,s,i,c,l,f,d)+d=d
+
+
+
+
+
+
+8)
+byte a=5;
+byte b=4;
+byte c=a+b;
+sysout(c);//error
+
+9)
+byte a=35;
+short b=30;
+char c=(char)(a+b);
+sysout(c);//A
