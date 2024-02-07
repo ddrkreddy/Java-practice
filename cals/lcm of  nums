@@ -1,0 +1,36 @@
+To find lcm[least common multiple] of nums, we have formula
+
+lcm(a,b) = (a*b) / gcd(a,b)
+
+ex:-
+
+lcm(6,8) = (6*8) / gcd(6,8)
+
+now we need to find gcd(6,8)[greatest common divisor of (6,8)] i.e.;
+  factors of 6--->1,2,3,6
+  factors of 8--->1,2,4,8
+  from above 2 is the greatest(big) common divisor for 6 & 8. i.e.; gcd(6,8) = 2.
+
+Therefore; lcm(6,8) = (6*8)/2 = 48/2 = 24.
+
+Initially, gcd b/w any nums is 1.
+
+
+
+import java.util.*;
+class Lcm{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int a=s.nextInt();
+    int b=s.nextInt();
+    int gcd=1;
+    for(int i=1; i<=a && i<=b; i++){
+      if(a%i==0 && b%i==0) gcd=i;
+    }
+    int lcm=(a*b)/gcd;
+    System.out.println(lcm);
+  }
+}
+
+
+
