@@ -1,0 +1,61 @@
+5!  =   5*4*3*2*1  =   120
+
+
+find factorial using for loop.
+
+import java.util.*;
+class Fact{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    int fact=1;
+    for(int i=1;i<=n;i++){
+      fact=fact*i;
+    }
+    System.out.println("factorial of "+n+" is : "+fact);
+  }
+}
+
+
+
+find factorial using function.
+
+
+import java.util.*;
+class Fact{
+  int fact(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+      fact*=i;
+    }
+    return fact;
+  }
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    Fact obj=new Fact();
+    int x=obj.fact(n);
+    System.out.println("factorial of "+n+" is : "+x);
+ }
+}
+  
+
+
+find factorial using recursion function.
+
+
+import java.util.*;
+class Fact{
+  int fact(int n){
+    if(n==0) return 1;
+    else return (n*fact(n-1));
+    
+  }
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    Fact obj=new Fact();
+    int x=obj.fact(n);
+    System.out.println("factorial of "+n+" is : "+x);
+ }
+}
