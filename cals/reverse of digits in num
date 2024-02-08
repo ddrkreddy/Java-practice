@@ -1,0 +1,37 @@
+123--->321
+
+for this, 1st we need to find how to get last digit of a num. i.e.; 3
+for this we need to do
+  digit=num%10
+  ex:-
+      10) 123 (12  (/)
+          120
+        ------
+          3  (%)
+        ------
+  Therefore, digit=3.
+
+now we need to find how to reversing the num.
+Initially, if num=0, then rev=0
+           if num!=0, then rev = rev*10 + digit.
+
+now we need to remove last digit from the num to reverse the remaining digits. for that we need to do the following.
+      num=num/10
+
+
+import java.util.*;
+class Rev{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    int rev=0;
+    while(n>0){
+      int digit=n%10;
+
+      rev = rev*10 + digit;
+
+      n=n/10;
+    }
+    System.out.println(rev);
+  }
+}
