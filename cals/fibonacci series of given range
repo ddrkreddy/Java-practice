@@ -1,0 +1,21 @@
+In fibonacci series, next number is the sum of previous two numbers.
+for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. The first two numbers of fibonacci series are 0 and 1.
+
+
+
+import java.util.*;
+class Fibo{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    int first=0, second=1, next;
+    for(int i=1;i<=n;i++){
+      System.out.print(first);
+      next=first + second;
+      first=second;
+      second=next;
+      if(i==n) System.out.print(".");
+      else System.out.print(",");
+    }
+  }
+}
