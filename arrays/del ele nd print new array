@@ -1,0 +1,40 @@
+import java.util.*;
+class Main{
+    static int[] del(int[] a, int de){
+        int count=0;
+      //counting no. of occurences of an element in an array.
+        for(int b:a){
+            if(b==de) count++;
+        }
+//creating new array of length[old array length - count].
+        int[] na=new int[a.length-count];
+        int i=0;
+   //copying ele frm old array to new array except ele to delete.     
+        for(int b:a){
+            if(b!=de){
+                na[i++]=b;
+            }
+        }
+        return na;
+    }
+    
+    public static void main (String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        
+        int[] a=new int[n];
+  //we cannot use for-each loop to take i/p from user.      
+        for(int i=0; i<a.length; i++){
+            a[i]=s.nextInt();
+        }
+        
+        int de=s.nextInt();
+        
+        int[] na=del(a,de);
+        System.out.println("original array : "+Arrays.toString(a));
+        System.out.println("element to delete : "+de);
+        System.out.println("modified array : "+Arrays.toString(del(a,de)));
+        
+    }
+    
+}
