@@ -1,0 +1,46 @@
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int m=s.nextInt();
+        
+        int[] a=new int[n];
+        
+        for(int i=0; i<a.length; i++){
+            a[i]=s.nextInt();
+        }
+        
+        int[] b=new int[m];
+        
+        for(int i=0; i<b.length; i++){
+            b[i]=s.nextInt();
+        }
+        Arrays.sort(a);
+        for(int ele:a){
+            System.out.print(ele+" ");
+        }
+        System.out.println();
+        Arrays.sort(b);
+        for(int ele:b){
+            System.out.print(ele+" ");
+        }
+        System.out.println();
+        int[] c=new int[a.length+b.length];
+        int i=0;
+        
+        for(int ele:a){
+            c[i++] = ele;
+        }
+        
+        for(int ele:b){
+            c[i++] = ele;
+        }
+        //Arrays.sort(c);
+        for(int ele:c){
+            System.out.print(ele+" ");
+        }
+        
+    }
+    
+}
