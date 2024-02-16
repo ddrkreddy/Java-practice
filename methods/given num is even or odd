@@ -1,0 +1,15 @@
+import java.util.*;
+class Eo{
+  boolean eo(int n){
+    boolean r = (n%2==0) ? true : false;
+    return r;
+  }
+
+  public static void main(String[] args){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    Eo ob=new Eo();
+    boolean x=ob.eo(n);
+    System.out.println("Is given value even : "+x);
+  }
+}
