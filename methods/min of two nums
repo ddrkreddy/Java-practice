@@ -1,0 +1,17 @@
+import java.util.*;
+class Mot{
+  int min(int m, int n){
+    int res;
+    if(m>n) res=n;
+    else res=m;
+    return res;
+  }
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    int m=s.nextInt();
+    int n=s.nextInt();
+    Mot ob=new Mot();
+    int x=ob.min(m,n);
+    System.out.println("minimum of "+m+" & "+n+" is : "+x);  
+  }
+}
