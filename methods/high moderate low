@@ -1,0 +1,9 @@
+import java.util.*;
+class Hml{
+  public static void main(String[] args){
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    String res=(n>80)?"High":((n>49) && (n<81))?"Moderate":"Low";
+    System.out.println(res);
+  }
+}
