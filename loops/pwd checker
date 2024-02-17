@@ -1,0 +1,15 @@
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        Scanner s=new Scanner(System.in);
+        int pwd=1234;
+        int n;
+        do{
+            
+            n=s.nextInt();
+            if(n!=pwd) System.out.println("your entered pwd is wrong.");
+            else System.out.println("your entered pwd is correct.");
+            
+        }while(n!=pwd);
+    }
+}
